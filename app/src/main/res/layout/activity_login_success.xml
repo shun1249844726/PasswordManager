@@ -6,15 +6,140 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:gravity="center">
+    android:paddingTop="@dimen/activity_vertical_margin">
 
-    <TextView
+
+    <GridView
+        android:id="@+id/grid_psd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:numColumns="3">
+
+    </GridView>
+
+
+    <RelativeLayout
+        android:id="@+id/linearView"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_centerInParent="true"
+        android:background="@color/bg_color"
+        android:orientation="vertical"
+        android:visibility="gone"
+
+        >
+
+        <ImageButton
+            android:id="@+id/closeButton"
+            style="?android:borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:adjustViewBounds="true"
+            android:contentDescription="image"
+            android:src="@mipmap/close_button"
+            android:textColor="@color/white" />
+
+        <LinearLayout
+            android:id="@+id/layoutButtons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:padding="20dp">
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:textColorHint="#f0f7f4"
+                android:theme="@style/TextLabel">
+
+                <EditText
+                    android:id="@+id/edt_psd_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_bg_edit_2"
+                    android:hint="项目名称"
+                    android:inputType="textPersonName"
+                    android:paddingBottom="2dp"
+                    android:paddingTop="5dp"
+                    android:textColor="#f0f7f4"
+                    android:textCursorDrawable="@drawable/bg_input_cursor_2"
+                    android:textSize="15sp"
+                    android:visibility="gone" />
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:textColorHint="#f0f7f4"
+                android:theme="@style/TextLabel">
+
+                <EditText
+                    android:id="@+id/edt_psd_username"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_bg_edit_2"
+                    android:hint="@string/Username"
+                    android:inputType="textPersonName"
+                    android:paddingBottom="2dp"
+                    android:paddingTop="5dp"
+                    android:textColor="#f0f7f4"
+                    android:textCursorDrawable="@drawable/bg_input_cursor_2"
+                    android:textSize="15sp"
+                    android:visibility="gone" />
+            </android.support.design.widget.TextInputLayout>
+
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:textColorHint="#f0f7f4"
+                android:theme="@style/TextLabel">
+
+                <EditText
+                    android:id="@+id/edt_psd_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_bg_edit_2"
+                    android:hint="@string/Password"
+                    android:inputType="text"
+                    android:paddingBottom="2dp"
+                    android:paddingTop="5dp"
+                    android:textColor="#f0f7f4"
+                    android:textCursorDrawable="@drawable/bg_input_cursor_2"
+                    android:textSize="15sp"
+
+                    android:visibility="gone" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btn_add_sure"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bt_shape_2"
+                android:stateListAnimator="@drawable/state_list_animator_z"
+                android:text="确定"
+                android:textColor="#2fa881"
+                android:visibility="gone" />
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_add_psd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/login_success"
-        android:textSize="24sp"
-        android:textColor="#03A9F4"
-        android:textStyle="bold"
-        />
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="20dp"
+        android:elevation="4dp"
+        android:src="@drawable/plus" />
 </RelativeLayout>

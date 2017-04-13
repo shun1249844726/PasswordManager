@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/img_details_img"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/grid_img_bg" />
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColorHint="#c5c5c5">
+
+            <EditText
+                android:id="@+id/et_details_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_bg_edit"
+                android:hint="@string/pro_name"
+                android:inputType="textPersonName"
+                android:paddingBottom="2dp"
+                android:paddingTop="5dp"
+                android:textColor="#2fa881"
+                android:textCursorDrawable="@drawable/bg_input_cursor"
+                android:textSize="15sp" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColorHint="#c5c5c5">
+
+            <EditText
+                android:id="@+id/et_details_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_bg_edit"
+                android:hint="@string/Username"
+                android:inputType="textPersonName"
+                android:paddingBottom="2dp"
+                android:paddingTop="5dp"
+                android:textColor="#2fa881"
+                android:textCursorDrawable="@drawable/bg_input_cursor"
+                android:textSize="15sp" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColorHint="#c5c5c5"
+
+            app:passwordToggleDrawable="@drawable/eye"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/bg_color">
+
+            <EditText
+                android:id="@+id/et_details_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_bg_edit"
+                android:hint="@string/Password"
+                android:inputType="textPassword"
+                android:paddingBottom="2dp"
+                android:paddingTop="5dp"
+                android:textColor="#2fa881"
+                android:textCursorDrawable="@drawable/bg_input_cursor"
+                android:textSize="15sp" />
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/btn_details_save"
+            android:layout_width="160dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/bt_shape"
+            android:stateListAnimator="@drawable/state_list_animator_z"
+            android:textColor="@color/white"
+            android:text="确定">
+
+        </Button>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="or" />
+
+        <Button
+            android:id="@+id/btn_details_delete"
+            android:layout_width="160dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_details_delete"
+            android:text="删除"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</RelativeLayout>

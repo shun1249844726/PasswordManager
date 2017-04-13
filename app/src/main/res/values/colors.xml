@@ -3,4 +3,32 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="soft_grass_053_start">#c1dfc4</color>
+    <color name="soft_grass_053_end">#deecdd</color>
+
+    <color name="green">#4CAF50</color>
+    <color name="green_dark">#388E3C</color>
+
+    <color name="violet">#7C4DFF</color>
+    <color name="violet_dark">#673AB7</color>
+
+    <color name="grey">#BEBEBE</color>
+    <color name="twitter">#23C4FF</color>
+    <color name="twitter_transparency">#23C4FF</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="bg_color">#2ea67f</color>
+
+
+
+    <color name="light_green_900">#33691E</color>
+    <color name="purple_500">#9C27B0</color>
+    <color name="pink_500">#FF4081</color>
+    <color name="orange_500">#FF9800</color>
+    <color name="cyan_500">#00BCD4</color>
+    <color name="yellow_900">#F57F17</color>
+    <color name="red_edit">#F56262</color>
+    <color name="red_edit_pressed">#BC4F4F</color>
+
+
 </resources>

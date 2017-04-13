@@ -20,5 +20,6 @@ public class MyApplication extends Application {
         Bmob.initialize(this,APPID);
 
         Logger.init(TAG);
+
     }
 }
