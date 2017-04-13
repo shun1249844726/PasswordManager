@@ -126,11 +126,11 @@ public class ThisMainActivity extends AppCompatActivity {
 
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @OnClick(R.id.closeButton)
     public void closeAdd() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            closeAddView();
-        }
+        closeAddView();
+
     }
 
     @OnClick(R.id.btn_add_sure)
@@ -202,48 +202,72 @@ public class ThisMainActivity extends AppCompatActivity {
                     28 * pixelDensity
 
             );
+
+            anim.setDuration(350);
+            anim.addListener(new Animator.AnimatorListener() {
+                @Override
+                public void onAnimationStart(Animator animator) {
+
+                }
+
+                @Override
+                public void onAnimationEnd(Animator animator) {
+                    gridPsd.setAlpha(1f);
+                    gridClickable = true;
+
+
+                    linearView.setVisibility(View.GONE);
+                    fabAddPsd.setVisibility(View.VISIBLE);
+                    fabAddPsd.animate()
+                            .translationX(0f)
+                            .translationY(0f)
+                            .setDuration(200)
+                            .setListener(null);
+                }
+
+                @Override
+                public void onAnimationCancel(Animator animator) {
+
+                }
+
+                @Override
+                public void onAnimationRepeat(Animator animator) {
+
+                }
+            });
+            edtPsdContent.setVisibility(View.GONE);
+            edtPsdName.setVisibility(View.GONE);
+            edtPsdUsername.setVisibility(View.GONE);
+            btnAddSure.setVisibility(View.GONE);
+
+
+            layoutButtons.startAnimation(alphaDisappear);
+            layoutButtons.setVisibility(View.GONE);
+            anim.start();
+        } else {
+
+            gridPsd.setAlpha(1f);
+            gridClickable = true;
+
+
+            edtPsdContent.setVisibility(View.GONE);
+            edtPsdName.setVisibility(View.GONE);
+            edtPsdUsername.setVisibility(View.GONE);
+            btnAddSure.setVisibility(View.GONE);
+
+
+            layoutButtons.startAnimation(alphaDisappear);
+            layoutButtons.setVisibility(View.GONE);
+
+            linearView.setVisibility(View.GONE);
+            fabAddPsd.setVisibility(View.VISIBLE);
+            fabAddPsd.animate()
+                    .translationX(0f)
+                    .translationY(0f)
+                    .setDuration(200)
+                    .setListener(null);
+
         }
-        anim.setDuration(350);
-        anim.addListener(new Animator.AnimatorListener() {
-            @Override
-            public void onAnimationStart(Animator animator) {
-
-            }
-
-            @Override
-            public void onAnimationEnd(Animator animator) {
-                gridPsd.setAlpha(1f);
-                gridClickable = true;
-
-
-                linearView.setVisibility(View.GONE);
-                fabAddPsd.setVisibility(View.VISIBLE);
-                fabAddPsd.animate()
-                        .translationX(0f)
-                        .translationY(0f)
-                        .setDuration(200)
-                        .setListener(null);
-            }
-
-            @Override
-            public void onAnimationCancel(Animator animator) {
-
-            }
-
-            @Override
-            public void onAnimationRepeat(Animator animator) {
-
-            }
-        });
-        edtPsdContent.setVisibility(View.GONE);
-        edtPsdName.setVisibility(View.GONE);
-        edtPsdUsername.setVisibility(View.GONE);
-        btnAddSure.setVisibility(View.GONE);
-
-
-        layoutButtons.startAnimation(alphaDisappear);
-        layoutButtons.setVisibility(View.GONE);
-        anim.start();
 
     }
 
@@ -283,46 +307,65 @@ public class ThisMainActivity extends AppCompatActivity {
                                     hypotenuse
                             );
                             Logger.d("x:  " + gridPsd.getWidth() / 2 + "  y:  " + (int) ((float) 300 * pixelDensity / 2) + "  " + 28 * pixelDensity + "  " + hypotenuse);
+
+                            anim.setDuration(350);
+                            anim.addListener(new Animator.AnimatorListener() {
+                                @Override
+                                public void onAnimationStart(Animator animator) {
+
+                                }
+
+                                @Override
+                                public void onAnimationEnd(Animator animator) {
+                                    edtPsdContent.setVisibility(View.VISIBLE);
+                                    edtPsdName.setVisibility(View.VISIBLE);
+                                    edtPsdUsername.setVisibility(View.VISIBLE);
+                                    btnAddSure.setVisibility(View.VISIBLE);
+
+                                    layoutButtons.setVisibility(View.VISIBLE);
+                                    layoutButtons.startAnimation(alphaAppear);
+
+                                }
+
+                                @Override
+                                public void onAnimationCancel(Animator animator) {
+
+                                }
+
+                                @Override
+                                public void onAnimationRepeat(Animator animator) {
+
+                                }
+                            });
+                            gridPsd.setAlpha(0.5f);
+
+                            gridClickable = false;
+                            gridPsd.setClickable(false);
+                            gridPsd.setFocusable(false);
+
+                            fabAddPsd.setVisibility(View.GONE);
+                            linearView.setVisibility(View.VISIBLE);
+
+                            anim.start();
+                        } else {
+
+                            gridPsd.setAlpha(0.5f);
+
+                            gridClickable = false;
+                            gridPsd.setClickable(false);
+                            gridPsd.setFocusable(false);
+
+                            fabAddPsd.setVisibility(View.GONE);
+                            linearView.setVisibility(View.VISIBLE);
+
+                            edtPsdContent.setVisibility(View.VISIBLE);
+                            edtPsdName.setVisibility(View.VISIBLE);
+                            edtPsdUsername.setVisibility(View.VISIBLE);
+                            btnAddSure.setVisibility(View.VISIBLE);
+
+                            layoutButtons.setVisibility(View.VISIBLE);
+                            layoutButtons.startAnimation(alphaAppear);
                         }
-                        anim.setDuration(350);
-                        anim.addListener(new Animator.AnimatorListener() {
-                            @Override
-                            public void onAnimationStart(Animator animator) {
-
-                            }
-
-                            @Override
-                            public void onAnimationEnd(Animator animator) {
-                                edtPsdContent.setVisibility(View.VISIBLE);
-                                edtPsdName.setVisibility(View.VISIBLE);
-                                edtPsdUsername.setVisibility(View.VISIBLE);
-                                btnAddSure.setVisibility(View.VISIBLE);
-
-                                layoutButtons.setVisibility(View.VISIBLE);
-                                layoutButtons.startAnimation(alphaAppear);
-
-                            }
-
-                            @Override
-                            public void onAnimationCancel(Animator animator) {
-
-                            }
-
-                            @Override
-                            public void onAnimationRepeat(Animator animator) {
-
-                            }
-                        });
-                        gridPsd.setAlpha(0.5f);
-
-                        gridClickable = false;
-                        gridPsd.setClickable(false);
-                        gridPsd.setFocusable(false);
-
-                        fabAddPsd.setVisibility(View.GONE);
-                        linearView.setVisibility(View.VISIBLE);
-
-                        anim.start();
 
                     }
 

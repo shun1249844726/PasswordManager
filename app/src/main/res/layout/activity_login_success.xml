@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:numColumns="3">
+        android:numColumns="2">
 
     </GridView>
 
@@ -139,7 +139,6 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:layout_margin="20dp"
         android:elevation="4dp"
         android:src="@drawable/plus" />
 </RelativeLayout>

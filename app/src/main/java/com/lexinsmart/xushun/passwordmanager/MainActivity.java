@@ -39,6 +39,7 @@ import butterknife.OnClick;
 import cn.bmob.v3.BmobUser;
 import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.SaveListener;
+import cn.bmob.v3.update.BmobUpdateAgent;
 
 /**
  * Created by xushun on 2017/4/7.
@@ -88,6 +89,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
+
+
+        BmobUpdateAgent.initAppVersion();
+        BmobUpdateAgent.update(this);
     }
 
     @OnClick(R.id.fab)
