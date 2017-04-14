@@ -202,6 +202,7 @@ public class DetailsActivity extends AppCompatActivity {
             public void done(BmobException e) {
                 if (e == null) {
                     ToastUtils.showLongToast(getApplicationContext(), "删除成功");
+                    finish();
                 } else {
                     e.printStackTrace();
                 }

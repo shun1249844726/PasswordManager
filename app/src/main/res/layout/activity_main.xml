@@ -61,7 +61,6 @@
 
                             <EditText
                                 android:id="@+id/et_regist_username"
-
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:background="@drawable/selector_bg_edit_2"
@@ -90,7 +89,6 @@
 
                             <EditText
                                 android:id="@+id/et_regist_email"
-
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:background="@drawable/selector_bg_edit_2"
@@ -259,7 +257,6 @@
                                 android:inputType="textPersonName"
                                 android:paddingBottom="2dp"
                                 android:paddingTop="5dp"
-                                android:text="sendi"
                                 android:textColor="#2fa881"
                                 android:textCursorDrawable="@drawable/bg_input_cursor"
                                 android:textSize="15sp" />
@@ -291,7 +288,6 @@
                                 android:inputType="textPassword"
                                 android:paddingBottom="2dp"
                                 android:paddingTop="5dp"
-                                android:text="123456"
                                 android:textColor="#2fa881"
                                 android:textCursorDrawable="@drawable/bg_input_cursor"
                                 android:textSize="15sp" />

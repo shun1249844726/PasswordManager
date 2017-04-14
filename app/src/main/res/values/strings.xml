@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">PasswordManager</string>
+    <string name="app_name">Lexin密码箱</string>
 
 
     <string name="login_success">登陆成功</string>
