@@ -3,7 +3,11 @@
   title:  密码管理箱
 ---
 
+
+
 > 主要是用来学习android的动画的。以及bmob后端云的使用。
+项目地址： [PasswordManager](https://github.com/shun1249844726/PasswordManager)
+使用时请自觉替换掉``` MyApplication ```中的 ```APPID ```
 
 # 使用到的库
     1  butterknife
