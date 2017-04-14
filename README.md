@@ -12,17 +12,13 @@
    
 每个库的使用都很简单，bmob的使用方式官网简直详细的不能再详细了。
 
-> 简书中更改图片大小  更改末尾数字的宽高
->  ```
+ **简书中更改图片大小  更改末尾数字的宽高**
+  ```
 ![device.png](http://upload-images.jianshu.io/upload_images/2433593-530d45d319cbe62c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/400)
 ```
-> 
 ```
 ![device.png](http://upload-images.jianshu.io/upload_images/2433593-530d45d319cbe62c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/800)
 ```
-
-
-
 
 # 主要界面
 ##  登陆
